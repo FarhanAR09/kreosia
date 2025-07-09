@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import React from 'react';
 
 const SocialButton = ({
   href,
   icon, // This will be the SVG icon component
+  altText,
   handleText, // e.g., "@kreo_sia"
   backgroundColorClass, // e.g., "bg-gradient-to-r from-purple-600 to-pink-500"
   circleColorClass, // e.g., "bg-white" for the circle background
@@ -27,7 +29,7 @@ const SocialButton = ({
       {/* Icon in Circle */}
       <div className={`flex-shrink-0 flex items-center justify-center rounded-full h-14 w-14 ${circleColorClass}`}>
         {/* Pass the icon prop directly */}
-        {icon}
+        <Image src={icon} alt={altText} className='h-8 w-8'/>
       </div>
 
       {/* Text in Rounded Box */}
