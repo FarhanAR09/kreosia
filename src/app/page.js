@@ -6,10 +6,11 @@ import SocialButton from '@/components/SocialButton';
 
 import kreoBG from '@/assets/images/kreo.jpg';
 import logoIG from '@/assets/images/logo-instagram.png';
-import logoKreo from '@/assets/images/logo-pemdeskreo.png';
 import Image from 'next/image';
 import CardButton from '@/components/CardButton';
 import KreosiaPageTemplate from '@/components/KreosiaPageTemplate';
+import LogoAndName from '@/components/LogoAndName';
+import BottomInformationPanel from '@/components/BottomInformationPanel';
 
 export default function Home() { // Or RootLayout if this is your app/layout.tsx
 
@@ -31,8 +32,6 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
     };
   }, [isSidebarOpen]);
 
-  // Define your header height. This should match the actual height of your header.
-  // Common Tailwind spacing values: 12 (48px), 14 (56px), 16 (64px)
   const HEADER_HEIGHT_CLASS = 'h-16'; // Using h-16 (64px) for consistency
   const HEADER_HEIGHT_PX = '64px'; // Explicit pixel value for `top` if not using Tailwind's `top-XX`
 
@@ -82,6 +81,9 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
             />
           </div>
         }
+
+        {/*Bottom Information Panel*/}
+        <BottomInformationPanel/>
       </div>}
     />
   );
