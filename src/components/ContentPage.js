@@ -8,8 +8,12 @@ import KreosiaPageTemplate from '@/components/KreosiaPageTemplate';
 import BottomInformationPanel from '@/components/BottomInformationPanel';
 
 export default function ContentPage({
-    image = kreoBG, title, content = <div/>
+    image = kreoBG, title = "", content = []
 }) {
+
+    const keyedContent = content.map((element, index) => {
+        return React.cloneElement(element, { key: index });
+    });
 
   const thumbnail = kreoBG;
   const information = <div className='flex flex-col items-center w-full overflow-y-auto gap-4'>
@@ -18,7 +22,7 @@ export default function ContentPage({
                 <p className={`text-4xl text-black font-bold pr-16 text-left w-full`}>
                     {title}
                 </p>
-                {content}
+                {keyedContent}
             </div>
             <BottomInformationPanel/>
         </div>;
