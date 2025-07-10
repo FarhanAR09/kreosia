@@ -109,7 +109,6 @@ export default function KreosiaPageTemplate({
           aria-hidden="true"
         ></div>
       )}
-
     </div>
   );
 }

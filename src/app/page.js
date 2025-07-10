@@ -1,15 +1,11 @@
 'use client';
 
 import React, { useState, useEffect } from 'react'; // Import useState, useEffect
-import SidebarNavLink from '@/components/SidebarNavLink';
-import SocialButton from '@/components/SocialButton';
 
 import kreoBG from '@/assets/images/kreo.jpg';
-import logoIG from '@/assets/images/logo-instagram.png';
 import Image from 'next/image';
 import CardButton from '@/components/CardButton';
 import KreosiaPageTemplate from '@/components/KreosiaPageTemplate';
-import LogoAndName from '@/components/LogoAndName';
 import BottomInformationPanel from '@/components/BottomInformationPanel';
 
 export default function Home() { // Or RootLayout if this is your app/layout.tsx
