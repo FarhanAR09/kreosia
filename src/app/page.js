@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'; // Import useState, useEffect
+import React, { useState, useEffect, useRef } from 'react'; // Import useState, useEffect
+import { useSearchParams } from 'next/navigation';
 
 import kreoBG from '@/assets/images/kreo.jpg';
 import Image from 'next/image';
@@ -14,6 +15,20 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
   
   const [active, setActive] = useState("WISATA");
   const buttons = ["WISATA", "PRODUK LOKAL", "PROFIL DESA"];
+
+  // Scroll Refs
+  const searchParams = useSearchParams();
+  const section = searchParams.get('section');
+  const contentRef = useRef(null);
+  useEffect(() => {
+    if (!section) return;
+    setTimeout(() => {
+      if (contentRef.current) {
+        contentRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 300);
+  }, [section]);
+
 
 
   // Effect to manage body scrolling when sidebar is open/closed
@@ -69,16 +84,53 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
             </button>
           ))}
         </div>
-        {
-          (active === buttons[0]) &&
-          <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,_minmax(0,_240px))] px-4 gap-4 justify-center">
-            <CardButton
-              imageSrc={kreoBG}
-              title="Wisata Kreo"
-              subtitle="Lorem ipsum dolor sit amet"
-            />
-          </div>
-        }
+        <div ref={contentRef}>
+          {
+            (active === buttons[0]) &&
+            <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,_minmax(0,_240px))] px-4 gap-4 justify-center">
+              <CardButton
+                imageSrc={kreoBG}
+                title="Wisata Kreo"
+                subtitle="Lorem ipsum dolor sit amet"
+              />
+            </div>
+          }
+          {
+            (active === buttons[1]) &&
+            <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,_minmax(0,_240px))] px-4 gap-4 justify-center">
+              <CardButton
+                imageSrc={kreoBG}
+                title="Wisata Kreo"
+                subtitle="Lorem ipsum dolor sit amet"
+              />
+              <CardButton
+                imageSrc={kreoBG}
+                title="Wisata Kreo"
+                subtitle="Lorem ipsum dolor sit amet"
+              />
+            </div>
+          }
+          {
+            (active === buttons[2]) &&
+            <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,_minmax(0,_240px))] px-4 gap-4 justify-center">
+              <CardButton
+                imageSrc={kreoBG}
+                title="Wisata Kreo"
+                subtitle="Lorem ipsum dolor sit amet"
+              />
+              <CardButton
+                imageSrc={kreoBG}
+                title="Wisata Kreo"
+                subtitle="Lorem ipsum dolor sit amet"
+              />
+              <CardButton
+                imageSrc={kreoBG}
+                title="Wisata Kreo"
+                subtitle="Lorem ipsum dolor sit amet"
+              />
+            </div>
+          }
+        </div>
 
         {/*Bottom Information Panel*/}
         <BottomInformationPanel/>

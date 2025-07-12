@@ -1,17 +1,24 @@
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 const SidebarNavLink = ({
   imageUrl,
   altText,
-  buttonText,
-  onClick,
+  buttonText,  
+  section,
   className = '',
 }) => {
+  
+  const router = useRouter();
+  const handleClick = () => {
+    router.push(`/?section=${encodeURIComponent(section || "")}`);
+  };
+
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={handleClick}
       className={`relative w-full h-36 rounded-xl overflow-hidden shadow-lg
                   group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
                   ${className}`}

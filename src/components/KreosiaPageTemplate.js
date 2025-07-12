@@ -62,16 +62,16 @@ export default function KreosiaPageTemplate({
             <nav className="flex-grow flex flex-col items-center gap-y-4 overflow-y-auto p-6"> {/* Added pt-8 for top padding */}
               <div className='flex flex-col items-center flex-grow gap-y-4 w-full'> {/* ADDED flex-grow and gap-y-6 and w-full */}
                 {/* WISATA */}
-                <SidebarNavLink imageUrl={kreoBG} buttonText={"WISATA"} altText={"WISATA"}>
+                <SidebarNavLink imageUrl={kreoBG} buttonText={"WISATA"} altText={"WISATA"} section="content">
                 </SidebarNavLink>
                 {/* PRODUK LOKAL */}
-                <SidebarNavLink imageUrl={kreoBG} buttonText={"PRODUK LOKAL"}  altText={"PRODUK LOKAL"}>
+                <SidebarNavLink imageUrl={kreoBG} buttonText={"PRODUK LOKAL"} altText={"PRODUK LOKAL"} section="content">
                 </SidebarNavLink>
                 {/* INVESTING */}
                 <SidebarNavLink imageUrl={kreoBG} buttonText={"INVESTING"} altText={"INVESTING"}>
                 </SidebarNavLink>
                 {/* PROFIL KREO */}
-                <SidebarNavLink imageUrl={kreoBG} buttonText={"PROFIL KREO"} altText={"PROFIL KREO"}>
+                <SidebarNavLink imageUrl={kreoBG} buttonText={"PROFIL KREO"} altText={"PROFIL KREO"} section="content">
                 </SidebarNavLink>
               </div>
             </nav>
