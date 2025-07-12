@@ -12,8 +12,8 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
-  const [active, setActive] = useState("Wisata");
-  const buttons = ["Wisata", "Produk Lokal", "Profil Desa"];
+  const [active, setActive] = useState("WISATA");
+  const buttons = ["WISATA", "PRODUK LOKAL", "PROFIL DESA"];
 
 
   // Effect to manage body scrolling when sidebar is open/closed
@@ -60,10 +60,12 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
               onClick={() => setActive(label)}
               className={`flex-1 h-12 rounded-xl transition-colors duration-200 font-semibold
                 ${active === label
-                  ? "bg-red-600 text-white shadow-md"
-                  : "bg-red-200 text-red-800 hover:bg-red-300"}`}
+                  ? "bg-[#87CD87] text-white shadow-md"
+                  : "bg-[#375E37] text-white hover:bg-[#004300]"}`}
             >
-              {label}
+              <p className="text-l">
+                {label}
+              </p>
             </button>
           ))}
         </div>

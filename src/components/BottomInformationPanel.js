@@ -10,7 +10,7 @@ export default function BottomInformationPanel({
 
 }) {
   return (
-    <div className='flex flex-col bg-gray-900 w-full items-center justify-start gap-4 p-8'>
+    <div className='flex flex-col bg-[#002B00] w-full items-center justify-start gap-4 p-8'>
           <LogoAndName/>
           <div/>
           <p className=''>

@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react'; // Import useState, useEffect
-
+import React from 'react';
 import kreoBG from '@/assets/images/kreo.jpg';
 import Image from 'next/image';
 import KreosiaPageTemplate from '@/components/KreosiaPageTemplate';

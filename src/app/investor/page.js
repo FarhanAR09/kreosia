@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react'; // Import useState, useEffec
 
 import kreoBG from '@/assets/images/kreo.jpg';
 import Image from 'next/image';
-import BottomInformationPanel from '@/components/BottomInformationPanel';
 import ContentPage from '@/components/ContentPage';
 
 export default function DummyContentPage() {

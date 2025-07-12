@@ -19,7 +19,7 @@ export default function KreosiaPageTemplate({
     <div className="flex flex-col h-screen">
 
       {/* Top Bar (Header) */}
-      <header className={`bg-blue-700 text-white p-4 shadow-md sticky top-0 z-50 flex items-center justify-between ${HEADER_HEIGHT_CLASS}`}>
+      <header className={`bg-[#002B00] text-white p-4 shadow-md sticky top-0 z-50 flex items-center justify-between ${HEADER_HEIGHT_CLASS}`}>
         <div className="flex-shrink-0">
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -51,7 +51,7 @@ export default function KreosiaPageTemplate({
       {/* Sidebar - Overlay behavior */}
       <aside
             className={`
-              fixed left-0 z-40 w-3/4 max-w-64 bg-gray-900 text-white
+              fixed left-0 z-40 w-3/4 max-w-64 bg-[#375E37] text-white
               transform transition-transform duration-300 ease-in-out
               ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
               flex flex-col
@@ -77,7 +77,7 @@ export default function KreosiaPageTemplate({
             </nav>
 
             {/* Social Media Links at the bottom */}
-            <div className="mt-auto flex flex-col gap-y-4 pb-4 bg-black p-6">
+            <div className="mt-auto flex flex-col gap-y-4 pb-4 bg-[#002B00] p-6">
               <SocialButton // <-- Using the new component
                 href="https://www.instagram.com/kreo_sia"
                 icon={logoIG}
