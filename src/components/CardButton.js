@@ -2,17 +2,21 @@
 
 import Image from 'next/image';
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function CardButton({
-  onClick,
   imageSrc,
-  title = 'hello',
-  subtitle = 'huh',
+  title = '',
+  subtitle = '',
+  pageRoute = "",
 }) {
+
+  const router = useRouter();
+
   return (
     <button
       type="button"
-      onClick={onClick}
+      onClick={() => {router.push(pageRoute)}}
       className={`relative w-full h-48 rounded-xl overflow-hidden shadow-lg
                   group focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50`}
     >
