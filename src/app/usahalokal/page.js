@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react'; // Import useState, useEffect
 import { useRouter, useSearchParams  } from 'next/navigation';
+import Image from 'next/image'; 
 
 import kreoBG from '@/assets/images/kreo.jpg';
 import ContentPage from '@/components/ContentPage';
@@ -41,17 +42,18 @@ export default function Page() {
   {
     title = content.title
     children = [
-              <p className={`text-base text-black`}>
-                {content.text}
-              </p>
+      <Image src={content.imageUrl || kreoBG} alt="Gambar Desa Kreo" className='w-64 object-fit' width={1200} height={400}/>,
+      <p className={`text-base text-black`}>
+        {content.text}
+      </p>
     ];
   }
 
   const image = kreoBG;
 
   return (
-    <ContentPage title={isLoading ? "Memuat..." : title} image={image} content={ isLoading ? [<div className="flex justify-center items-center py-12">
-        <div className="w-6 h-6 border-4 border-blue-400 border-t-transparent rounded-full animate-spin" />
+    <ContentPage title={isLoading ? "Memuat..." : title} image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf7ylvRNdmeewpoS0fuBKJYvj0b5f5h6HItw&s" content={ isLoading ? [<div className="flex justify-center items-center py-12">
+        <div className="w-12 h-12 border-4 border-blue-400 border-t-transparent rounded-full animate-spin" />
     </div>] : children }/>
   );
 }
