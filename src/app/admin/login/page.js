@@ -3,16 +3,21 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AdminPageTemplate from '@/components/AdminPageTemplate';
+import { useAdminAuth } from "@/hooks/useAdminAuth";
 
 export default function Page() {
-  const router = useRouter();
-  const [password, setPassword] = useState('');
+    const router = useRouter();
+    const [password, setPassword] = useState('');
+    const { login } = useAdminAuth({ protect: false });
+    const [error, setError] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log('Login attempted with password:', password);
-    if (password === "admin"){
-      router.push("/admin")
+    if (password === "admin") {
+      login("admin-token");
+      router.push("/admin");
+    } else {
+      setError("Incorrect password");
     }
   };
 

@@ -3,6 +3,7 @@
 import React, {useState} from 'react';
 import LogoAndNameAdmin from '@/components/LogoAndNameAdmin';
 import { useRouter } from 'next/navigation';
+import { useAdminAuth } from '@/hooks/useAdminAuth';
 
 export default function AdminPageTemplate({
   content
@@ -11,6 +12,12 @@ export default function AdminPageTemplate({
     const HEADER_HEIGHT_PX = '64px'; // Explicit pixel value for `top` if not using Tailwind's `top-XX`
     
     const router = useRouter();
+    const { logout } = useAdminAuth();
+
+    const handleLogout = () => {
+      logout();
+      router.push("/");
+    }
     
     return (
     <div className="flex flex-col h-screen">
@@ -19,7 +26,7 @@ export default function AdminPageTemplate({
       <header className={`bg-[#002B00] text-white p-4 shadow-md sticky top-0 z-50 flex items-center justify-between ${HEADER_HEIGHT_CLASS}`}>
         <div className="flex-shrink-0">
           <button
-            onClick={() => {router.push("/")}}
+            onClick={handleLogout}
             className="text-white hover:text-blue-200 focus:outline-none"
             aria-label="Toggle sidebar"
           >

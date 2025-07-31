@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAdminAuth } from "@/hooks/useAdminAuth";
 import {
   fetchItems,
   createItem,
@@ -12,17 +14,13 @@ import ItemTable from "@/components/ItemTable";
 import AdminPageTemplate from "@/components/AdminPageTemplate";
 
 export default function AdminPage() {
+    
+    const router = useRouter();
+    const { authenticated, loading: authLoading } = useAdminAuth();
+
   const [items, setItems] = useState([]);
   const [editingItem, setEditingItem] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
-
-  useEffect(() => {
-  setLoading(true);
-  fetchItems().then((items) => {
-    setItems(items);
-    setLoading(false);
-  });
-}, []);
 
     const handleSave = async (item) => {
         setLoading(true);
@@ -46,6 +44,16 @@ export default function AdminPage() {
     };
 
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+        if (!authLoading && authenticated) {
+        setLoading(true);
+        fetchItems().then((items) => {
+            setItems(items);
+            setLoading(false);
+        });
+        }
+    }, [authLoading, authenticated]);
 
   return (
     <AdminPageTemplate
