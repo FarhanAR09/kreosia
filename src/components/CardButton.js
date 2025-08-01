@@ -34,8 +34,8 @@ export default function CardButton({
       ></div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-end p-4 z-10 text-white">
-        <h1>{title}</h1>
-        {subtitle}
+        <p className='text-base font-bold'>{title}</p>
+        <p className='text-xs'>{subtitle}</p>
       </div>
     </button>
   );

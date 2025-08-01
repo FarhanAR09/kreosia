@@ -9,6 +9,11 @@ import CardButton from '@/components/CardButton';
 import KreosiaPageTemplate from '@/components/KreosiaPageTemplate';
 import BottomInformationPanel from '@/components/BottomInformationPanel';
 
+//Thumbnails Wisata
+import imgDamSerayu from '@/assets/images/wisata/wisata-damSerayu2.jpg'
+import imgTamanBunga from '@/assets/images/wisata/wisata-tamanBunga.jpg'
+import imgKebunTeh from '@/assets/images/wisata/wisata-kebunTeh.jpg'
+
 export default function Home() { // Or RootLayout if this is your app/layout.tsx
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -93,11 +98,11 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
 
   {/* Bottom-right "JELAJAHI SEKARANG" with arrow */}
   <div className="absolute bottom-6 right-6 flex items-center gap-2 z-10 animate-bounce">
-    <span className="text-l sm:text-base font-semibold drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
+    <span className="text-2xl sm:text-base font-semibold drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
       JELAJAHI SEKARANG
     </span>
     <svg
-      className="w-5 h-5 text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+      className="w-8 h-8 text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
       fill="none"
       stroke="currentColor"
       strokeWidth="4"
@@ -129,10 +134,22 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
             (activeSection === buttons[0]) &&
             <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,_minmax(0,_240px))] px-4 gap-4 justify-center">
               <CardButton
-                imageSrc={kreoBG}
-                title="Wisata Kreo"
-                subtitle="Lorem ipsum dolor sit amet"
-                pageRoute="/wisata/loremipsum"
+                imageSrc={imgDamSerayu}
+                title="Dam Serayu"
+                subtitle="Infrastruktur Bersejarah yang Vital bagi Jawa Tengah"
+                pageRoute="/wisata/dam-serayu"
+              />
+              <CardButton
+                imageSrc={imgTamanBunga}
+                title="Taman Bunga Kreosia"
+                subtitle="Wisata Bunga Hortensia dengan Pemandangan Sindoro"
+                pageRoute="/wisata/taman-bunga"
+              />
+              <CardButton
+                imageSrc={imgKebunTeh}
+                title="Kebun Teh"
+                subtitle="Permadani Hijau di Bawah Sindoro"
+                pageRoute="/wisata/kebun-teh"
               />
             </div>
           }
@@ -169,19 +186,19 @@ export default function Home() { // Or RootLayout if this is your app/layout.tsx
                 imageSrc={kreoBG}
                 title="Wisata Kreo"
                 subtitle="Lorem ipsum dolor sit amet"
-                pageRoute="/wisata/loremipsum"
+                pageRoute="/wisata/dam-serayu"
               />
               <CardButton
                 imageSrc={kreoBG}
                 title="Wisata Kreo"
                 subtitle="Lorem ipsum dolor sit amet"
-                pageRoute="/wisata/loremipsum"
+                pageRoute="/wisata/taman-bunga"
               />
               <CardButton
                 imageSrc={kreoBG}
                 title="Wisata Kreo"
                 subtitle="Lorem ipsum dolor sit amet"
-                pageRoute="/wisata/loremipsum"
+                pageRoute="/wisata/kebun-teh"
               />
             </div>
           }
