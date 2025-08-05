@@ -18,13 +18,11 @@ function UsahaLokalContent() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (!slug) return;
-
     const fetchData = async () => {
       try {
         console.log("Requesting");
         const res = await fetch(`/api/usaha-lokal?slug=${slug}`);
-        if (!res.ok) throw new Error("Not found");
+        if (!res.ok || !slug) throw new Error("Not found");
         const data = await res.json();
         setContent(data);
       } catch (err) {
