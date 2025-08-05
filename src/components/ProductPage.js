@@ -57,7 +57,7 @@ export default function ProductPage({
           caption={title}
           imageWidth={64}
         />,
-        <p className={`text-base text-black`}>
+        <p className={`text-base text-black text-justify`}>
           {data.description}
         </p>
     ];

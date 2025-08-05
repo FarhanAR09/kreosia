@@ -11,6 +11,8 @@ import BottomInformationPanel from "@/components/BottomInformationPanel";
 import imgDamSerayu from "@/assets/images/wisata/wisata-damSerayu2.jpg";
 import imgTamanBunga from "@/assets/images/wisata/wisata-tamanBunga.jpg";
 import imgKebunTeh from "@/assets/images/wisata/wisata-kebunTeh.jpg";
+import imgMakamSigelap1 from '@/assets/images/wisata/wisata-makamsigelap1.jpg'
+import imgMakamSigelap2 from '@/assets/images/wisata/wisata-makamsigelap2.jpg'
 
 // Thumbnails Produk
 import imgSinarAbadi from "@/assets/images/produk/produk-combrosinarabadi.jpg";
@@ -201,6 +203,18 @@ function HomeContent() {
                   subtitle="Permadani Hijau di Bawah Sindoro"
                   pageRoute="/wisata/kebun-teh"
                 />
+                <CardButton
+                  imageSrc={imgMakamSigelap1}
+                  title="Makam Sigelap"
+                  subtitle="Jejak Spiritual dan Sejarah Purba di Kreo"
+                  pageRoute="/wisata/makam-sigelap"
+                />
+                <CardButton
+                  imageSrc={imgMakamSigelap2}
+                  title="Sejarah Makam Sigelap"
+                  subtitle=""
+                  pageRoute="/wisata/sejarah-makam-sigelap"
+                />
               </div>
             )}
 
@@ -238,82 +252,82 @@ function HomeContent() {
 
             {activeSection === "PROFIL DESA" && (
               <div className="pl-16 pr-16 pt-8 pb-8 flex flex-col gap-4">
-                <p className={`text-3xl font-bold text-black`}>
+                <p className={`text-3xl font-bold text-black text-justify`}>
                   Identitas Desa
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Apa nama desa?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Desa Kreo
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Kata Kreo berasal dari kata magreho yang artinya peliharalah atau jagalah. Berdasarkan informasi tutur masyarakat, Kreo berasal dari kata Krenyo yang berarti sembung atau kayu sembung, konon katanya dulu di kreo banyak ditumbuhi pohon sembung. Ada yang mengatakan kata Kreo dari bahasa arab yaitu qoryatun atau qoriyah yang berarti desa. Dan jika benar, kata kreo berasal dari bahasa arab, maka yang memberi nama tentu orang yang sudah mengenal islam atau mubaligh yang menyebarkan agama di wilayah dieng. Disinyalir mereka adalah pasukan dari Demak Bintara yang makamnya ada di perkuburan sigelap.
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Di mana lokasi desa?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Desa Kreo merupakan desa di Kecamatan Kejajar, Kabupaten Wonosobo, Provinsi Jawa Tengah, Indonesia. Desa Kreo berada di sebelah barat Kecamatan Kejajar. Wilayahnya terletak di lereng Gunung Seroja dengan luas wilayah sekitar 2,84 km². Penduduk Desa Kreo mengandalkan mata pencahariannya sebagai petani terutama petani tembakau dan berbagai sayur-mayur musiman.
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Berapa luas wilayah desa?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Luas wilayah sekitar 2,84 km².
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Berapa jumlah penduduk desa?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   1909 penduduk
                 </p>
 
-                <p className={`text-3xl font-bold text-black`}>
+                <p className={`text-3xl font-bold text-black text-justify`}>
                   Geografi dan Iklim
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Bagaimana iklim di desa ini?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Suhu sekitar 16⁰ C - 23⁰ C pada siang hari, dan malam sekitar 12⁰ C - 16⁰ C, dan pada musim kemarau tentunya bisa lebih dingin.
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Bagaimana keadaan geografis desa? 
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Desa Kreo terletak di kaki Gunung Seroja atau Gunung Sikudi, yang merupakan pecahan dari letusan Gunung Prahu, gunung yang berada di tengah-tengah pulau Jawa, tetapi setelah mengalami letusan terdahsyat, gunung Prahu pecah menjadi bukit-bukit, Pakuwaja, Sikunir, Prahu, dan Sikudi, yang menyebar di wilayah pegunungan Dieng, dan sekarang lebih dikenal dengan Dataran Tinggi Dieng (dieng plateu). Desa Kreo berada di ketinggian sekitar 1.400 mdpl. 
                 </p>
 
-                <p className={`text-3xl font-bold text-black`}>
+                <p className={`text-3xl font-bold text-black text-justify`}>
                   Ekonomi dan Infrastruktur
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Apa sektor ekonomi utama di desa?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Pertanian, UMKM
                 </p>
-                <p className={`text-lg font-semibold text-black pl-4`}>
+                <p className={`text-lg font-semibold text-black pl-4 text-justify`}>
                   Apa jenis usaha yang paling banyak di desa?
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Kopi dan Combro Kentang
                 </p>
 
-                <p className={`text-3xl font-bold text-black`}>
+                <p className={`text-3xl font-bold text-black text-justify`}>
                   Budaya
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Desa Kreo merupakan salah satu desa di Kecamatan Kejajar, Kabupaten Wonosobo, Jawa Tengah. Berdasarkan informasi tutur masyarakat, Kreo berasal dari kata “krenyo” yang berarti sembung atau kayu sembung, konon katanya dulu di Kreo banyak ditumbuhi pohon sembung.
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Secara geografis, Desa Kreo terletak di lereng Gunung Seroja atau Gunung Sikudi, pecahan dari letusan Gunung Prahu yang membentuk pegunungan Dieng. Berada di ketinggian sekitar 1.400 meter di atas permukaan laut, desa ini memiliki iklim sejuk, dengan suhu siang berkisar antara 16°C – 23°C dan malam hari antara 12°C – 16°C, bahkan lebih dingin saat musim kemarau.
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Luas wilayah Desa Kreo mencapai 2,84 km², dihuni oleh sekitar 1.909 jiwa. Sebagian besar penduduk menggantungkan hidup dari sektor pertanian, khususnya petani tembakau dan sayur-mayur. Selain itu, desa ini juga dikenal dengan produk UMKM seperti kopi dan combro kentang sebagai produk unggulan lokal.
                 </p>
-                <p className={`text-base font-normal text-black pl-8`}>
+                <p className={`text-base font-normal text-black pl-8 text-justify`}>
                   Desa Kreo merupakan salah satu desa pegunungan yang potensial baik dari sektor pertanian maupun pengembangan ekonomi lokal berbasis UMKM, dengan potensi wisata alam dan budaya yang bisa dikembangkan di masa depan.
                 </p>
               </div>
