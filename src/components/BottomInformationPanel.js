@@ -4,7 +4,11 @@ import React from 'react';
 import LogoAndName from '@/components/LogoAndName';
 import SocialButton from '@/components/SocialButton';
 
-import logoKreo from '@/assets/images/logo-pemdeskreo.png';
+import logoKreo from '@/assets/images/logo-kreo.png';
+import logoArunika from '@/assets/images/logo-arunika.png';
+import logoUGM from '@/assets/images/logo-ugm.png';
+import logoKKN from '@/assets/images/logo-kkn.png';
+import Image from 'next/image';
 
 export default function BottomInformationPanel({
 
@@ -14,10 +18,10 @@ export default function BottomInformationPanel({
           <LogoAndName/>
           <div/>
           <p className=''>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec feugiat lacus. Sed quis posuere elit. Nam euismod maximus lectus, nec fermentum lectus gravida et. Vestibulum euismod mi ac magna rutrum condimentum. Aliquam tellus magna, pretium quis pulvinar at, malesuada in mi. Proin imperdiet dapibus neque, eu tempus est ultricies et. Nulla facilisi. Curabitur sed dui fringilla, pretium ipsum id, varius neque. Aenean id metus in leo auctor rhoncus vel sit amet orci. Integer venenatis, dui eget ultricies auctor, ante nibh blandit dui, dapibus tincidunt felis elit molestie tortor. Curabitur id justo a mauris molestie varius.
+            Website kreosia.com adalah kolaborasi antara Pemerintah Desa Kreo, Kelompok Sadar Wisata Desa Kreo, dan Tim KKN-PPM UGM 2025 Arunika Wonosobo yang bertujuan untuk mempromosikan potensi pariwisata dan UMKM lokal Desa Kreo secara digital, memudahkan akses informasi bagi wisatawan, serta membuka peluang investasi untuk pengembangan desa secara berkelanjutan.
           </p>
           <p className=''>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec feugiat lacus. Sed quis posuere elit. Nam euismod maximus lectus, nec fermentum lectus gravida et. Vestibulum euismod mi ac magna rutrum condimentum. Aliquam tellus magna, pretium quis pulvinar at, malesuada in mi. Proin imperdiet dapibus neque, eu tempus est ultricies et. Nulla facilisi. Curabitur sed dui fringilla, pretium ipsum id, varius neque. Aenean id metus in leo auctor rhoncus vel sit amet orci. Integer venenatis, dui eget ultricies auctor, ante nibh blandit dui, dapibus tincidunt felis elit molestie tortor. Curabitur id justo a mauris molestie varius.
+            Melalui kolaborasi ini, kreosia.com tidak hanya menjadi sarana promosi, tetapi juga wadah pemberdayaan masyarakat Desa Kreo. Dengan memanfaatkan teknologi digital, masyarakat didorong untuk aktif mengelola dan mempublikasikan potensi wisata serta produk unggulan mereka, sehingga mampu menjangkau pasar yang lebih luas. Kolaborasi ini diharapkan dapat meningkatkan kunjungan wisatawan, memperkuat brand Desa Kreo sebagai destinasi wisata unggulan Wonosobo, dan mendorong pertumbuhan ekonomi lokal yang berkesinambungan.
           </p>
           <div/>
           <SocialButton // <-- Using the new component
@@ -29,7 +33,41 @@ export default function BottomInformationPanel({
                 circleColorClass="bg-white"
                 textColorClass="text-white"
                 onClick={() => setIsSidebarOpen(false)}
-              />
+          />
+          <div className={`flex items-center justify-center space-x-2 bg-white p-4 rounded-4xl`}>
+            <div className="relative h-8 w-8">
+                <Image
+                  src={logoUGM}
+                  alt="Kreosia Logo"
+                  fill
+                  className="object-contain"
+                />
+            </div>
+            <div className="relative h-8 w-8">
+                <Image
+                  src={logoKKN}
+                  alt="Kreosia Logo"
+                  fill
+                  className="object-contain"
+                />
+            </div>
+            <div className="relative h-8 w-8">
+                <Image
+                  src={logoArunika}
+                  alt="Kreosia Logo"
+                  fill
+                  className="object-contain"
+                />
+            </div>
+            <div className="relative h-8 w-8">
+                <Image
+                  src={logoKreo}
+                  alt="Kreosia Logo"
+                  fill
+                  className="object-contain"
+                />
+            </div>
+          </div>
         </div>
   );
 }

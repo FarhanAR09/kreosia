@@ -5,7 +5,7 @@ import SidebarNavLink from '@/components/SidebarNavLink';
 import SocialButton from '@/components/SocialButton';
 import kreoBG from '@/assets/images/kreo.jpg';
 import logoIG from '@/assets/images/logo-instagram.png';
-import logoKreo from '@/assets/images/logo-pemdeskreo.png';
+import logoKreo from '@/assets/images/logo-kreo.png';
 import LogoAndName from '@/components/LogoAndName';
 
 export default function KreosiaPageTemplate({
